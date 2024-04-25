@@ -1,0 +1,15 @@
+<!-- Diese Datei sollte in C:\Users\ITS-Admin\.m2 liegen. -->
+<settings>
+  <servers>
+    <server>
+      <id>intern-admin</id>
+      <username>admin</username>
+      <password>admin123</password>
+    </server>
+    <server>
+      <id>intern-user</id>
+      <username>user</username>
+      <password>user123</password>
+    </server>
+  </servers>
+</settings>
