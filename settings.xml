@@ -12,4 +12,13 @@
       <password>user123</password>
     </server>
   </servers>
+  <profiles>
+    <profile>
+      <id>sonar</id>
+      <properties>
+        <sonar.host.url>http://localhost:9000</sonar.host.url>
+        <sonar.login>sqa_3a437f508a02fd20458f71e0869f05389742f39f</sonar.login>
+      </properties>
+    </profile>
+  </profiles>
 </settings>
