@@ -49,7 +49,48 @@
                     <skip>true</skip>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>revapi</id>
+
+            <repositories>
+                <repository>
+                    <id>intern-admin</id>
+                    <url>http://localhost:8081/repository/maven-intern/</url>
+                </repository>
+            </repositories>
+
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.revapi</groupId>
+                        <artifactId>revapi-maven-plugin</artifactId>
+                        <version>0.15.0</version>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.revapi</groupId>
+                                <artifactId>revapi-java</artifactId>
+                                <version>0.28.1</version>
+                            </dependency>
+                        </dependencies>
+                        <configuration>
+                            <oldVersion>LATEST</oldVersion>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>check</id>
+                                <!--phase>verify</phase-->
+                                <goals><goal>check</goal></goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
 </project>
